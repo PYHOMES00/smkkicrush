@@ -3,7 +3,7 @@ import re
 from os import environ
 
 id_pattern = re.compile(r'^.\d+$')
-AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', '').split()] # give channel id with seperate space. Ex : ('0')
+AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', '-1002173648219').split()] # give channel id with seperate space. Ex : ('0')
 
 #Bot token @Botfather
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "6769575529:AAEvaEvd-em2ThrbVum3zfxhhmTPWHLEG-E")
